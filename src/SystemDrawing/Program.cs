@@ -23,13 +23,11 @@ namespace SystemDrawing {
             };
 
             var newJson = JsonConvert.SerializeObject(data);
-
             Console.WriteLine(newJson);
 
             var newObject = JsonConvert.DeserializeObject<MyData>(newJson);
-            Console.WriteLine(newObject.ImageFormat == ImageFormat.Bmp);
+            Console.WriteLine(newObject.ImageFormat != ImageFormat.Bmp);
             Console.WriteLine(newObject.ImageFormat.Equals(ImageFormat.Bmp));
-            Console.WriteLine(newObject.ImageFormat);
         }
     }
 }
